@@ -1,0 +1,11 @@
+name: GResourcePack
+version: '${version}'
+main: io.github.galaxyvn.gresourcepack.GResourcePack
+api-version: 1.18
+authors: [ GalaxyVN ]
+commands:
+  gresourcepack:
+    aliases:
+      - grp
+      - grpack
+    permission: gresourcepack.admin

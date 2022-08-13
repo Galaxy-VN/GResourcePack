@@ -1,0 +1,10 @@
+gui:
+  title: "Chọn Gói Tài Nguyên"
+  rows: 6
+  items:
+    '1':
+      material: 'Bedrock'
+      slot: 22
+      resource-pack:
+        url: resource_pack_url
+        delay: 20
