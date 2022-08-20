@@ -18,7 +18,7 @@ public class ItemBuilder {
         FileConfiguration config = GResourcePack.plugin.getConfig();
 
         ItemBuilder builder = new ItemBuilder();
-        builder.material(MaterialUtils.matchMaterial(config.getString(path + ".ID")));
+        builder.material(MaterialUtils.matchMaterial(config.getString(path + ".material")));
         if (config.contains(path + ".amount")) {
             builder.amount(config.getInt(path + ".amount"));
         }
