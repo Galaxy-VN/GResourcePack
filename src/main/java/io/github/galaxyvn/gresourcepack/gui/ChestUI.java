@@ -22,14 +22,14 @@ public class ChestUI {
         final StaticPane pane = new StaticPane(0, 0, 9, rows);
         for (String item : config.getConfigurationSection("gui.items").getKeys(false)) {
             final GuiItem guiItem = new GuiItem(new ItemBuilder().build("gui.items." + item), event -> {
-                String url = config.getString("gui.itens." + item + "resource-pack.url");
-                int delay = config.getInt("gui.itens." + item + "resource-pack.delay");
+                String url = config.getString("gui.itens." + item + ".resource-pack.url");
+                int delay = config.getInt("gui.itens." + item + ".resource-pack.delay");
 
                 Validate.notNull(url, "Could not load resource pack URL");
 
                 Bukkit.getScheduler().scheduleSyncDelayedTask(GResourcePack.plugin, () -> ((Player) event.getWhoClicked()).setResourcePack(url), delay);
             });
-            int i = config.getInt("gui.items." + item + "slot");
+            int i = config.getInt("gui.items." + item + ".slot");
             pane.addItem(guiItem, i % 9, i / 9);
         }
 
